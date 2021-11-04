@@ -145,5 +145,51 @@ public class GenericController {
     void stopTime(ActionEvent event) {
     	myTimer.cancel();
     }
+    
+    @FXML
+    void resumeButton(ActionEvent event) {
+    	String timeOnBoard = timerLabel.getText().trim();
+    	String[] stringarray = timeOnBoard.split(":");
+    	
+    	minutes = Integer.parseInt(stringarray[0]);
+    	seconds = Integer.parseInt(stringarray[1]);
+    	
+    	
+    	myTimer = new Timer();
+        myTimer.scheduleAtFixedRate(new TimerTask(){
+        	public void run() {
+        		Platform.runLater(() -> {
+        			if((minutes == 0) && (seconds == 0))
+        			{
+        				myTimer.cancel();
+        			}
+        			String str = String.valueOf(seconds);
+        			String str2 = String.valueOf(minutes);
+        			
+        			if(seconds < 10)
+        			{
+        				str = String.valueOf("0" + seconds);
+        			}
+        			if(minutes < 10)
+        			{
+        				str2 = String.valueOf("0" + minutes);
+        			}
+        			
+        			timerLabel.setText(str2 + ":" + str);
+        			
+        			
+        			if((minutes != 0) && (seconds == 0))
+        			{
+        				seconds = 60;
+        				minutes--;
+        			}
+        			
+        			seconds--;
+        			
+        		});
+        	}
+        }, 0, 1000);
+    }
+    
 
 }

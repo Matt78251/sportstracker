@@ -28,8 +28,8 @@
                </font>
             </TextArea>
             <ProgressBar fx:id="pointComp" layoutX="441.0" layoutY="32.0" prefHeight="74.0" prefWidth="398.0" progress="0.0" />
-            <Button layoutX="548.0" layoutY="252.0" mnemonicParsing="false" onAction="#startTime" text="Start" />
-            <Button layoutX="672.0" layoutY="252.0" mnemonicParsing="false" onAction="#stopTime" text="Stop" />
+            <Button layoutX="524.0" layoutY="252.0" mnemonicParsing="false" onAction="#startTime" text="Start" />
+            <Button layoutX="694.0" layoutY="252.0" mnemonicParsing="false" onAction="#stopTime" text="Stop" />
             <Label fx:id="timerLabel" layoutX="582.0" layoutY="143.0">
                <font>
                   <Font size="50.0" />
@@ -37,6 +37,7 @@
             </Label>
             <TextField fx:id="enteredMinutes" layoutX="579.0" layoutY="310.0" prefHeight="39.0" prefWidth="123.0" promptText="Enter Mins" />
             <TextField fx:id="enteredSeconds" layoutX="579.0" layoutY="367.0" prefHeight="39.0" prefWidth="123.0" promptText="Enter Secs" />
+            <Button layoutX="597.0" layoutY="252.0" mnemonicParsing="false" onAction="#resumeButton" text="Resume" />
          </children>
       </AnchorPane>
    </children>
