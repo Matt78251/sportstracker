@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SportsMenuController">
    <children>
       <AnchorPane layoutY="-8.0" prefHeight="800.0" prefWidth="800.0">
          <children>
+            <ImageView fitHeight="792.0" fitWidth="800.0" layoutY="8.0" pickOnBounds="true" smooth="false" />
             <Label layoutX="294.0" layoutY="95.0" text="Select Your Sport" textAlignment="CENTER">
                <font>
                   <Font name="Comic Sans MS" size="25.0" />
                </font>
             </Label>
-            <Button layoutX="572.0" layoutY="299.0" mnemonicParsing="false" onAction="#basketBallButton" text="Basket Ball" />
+            <Button layoutX="572.0" layoutY="299.0" mnemonicParsing="false" onAction="#basketballButton" prefHeight="39.0" prefWidth="109.0" text="Basketball" />
             <Label layoutX="525.0" layoutY="202.0" text="Western Sports">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button layoutX="582.0" layoutY="247.0" mnemonicParsing="false" text="Football" />
+            <Button layoutX="572.0" layoutY="247.0" mnemonicParsing="false" onAction="#footballButton" prefHeight="39.0" prefWidth="109.0" text="Football" />
+            <Button layoutX="572.0" layoutY="349.0" mnemonicParsing="false" onAction="#golfButton" prefHeight="39.0" prefWidth="109.0" text="Golf" />
+            <Button layoutX="572.0" layoutY="400.0" mnemonicParsing="false" onAction="#hockeyButton" prefHeight="39.0" prefWidth="109.0" text="Hockey" />
          </children>
       </AnchorPane>
    </children>
