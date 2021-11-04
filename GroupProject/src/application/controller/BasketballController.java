@@ -10,7 +10,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class GenericController {
+public class BasketballController {
 	
     @FXML
     private TextArea teamOnePoints;
@@ -20,8 +20,6 @@ public class GenericController {
     
     @FXML
     private ProgressBar pointComp;
-    
-    public int pointVal = 2;
     
     @FXML
     private Label timerLabel;
@@ -35,18 +33,44 @@ public class GenericController {
     public int seconds = 0;
     public int minutes = 0;
     
-    
-    
-
+   
     @FXML
     void addPointTeamOne(ActionEvent event) {
-    	teamOnePoints.setText( Integer.toString(Integer.valueOf(teamOnePoints.getText())+pointVal) );
+    	String evt = event.getSource().toString();
+    	int pt = -1;
+    	switch ( evt.substring( evt.indexOf("]'")+2, evt.length()-1 ) ) {
+    		case "Free Throw":
+    			pt=1;
+    			break;
+    		case "Score":
+    			pt=2;
+    			break;
+    		case "Three Pointer":
+    			pt=3;
+    			break;
+    		default: break;
+    	}
+    	teamOnePoints.setText( Integer.toString(Integer.valueOf(teamOnePoints.getText())+pt) );
     	updatePB();
     }
 
     @FXML
     void addPointTeamTwo(ActionEvent event) {
-    	teamTwoPoints.setText( Integer.toString(Integer.valueOf(teamTwoPoints.getText())+pointVal) );
+    	String evt = event.getSource().toString();
+    	int pt = -1;
+    	switch ( evt.substring( evt.indexOf("]'")+2, evt.length()-1 ) ) {
+    		case "Free Throw":
+    			pt=1;
+    			break;
+    		case "Score":
+    			pt=2;
+    			break;
+    		case "Three Pointer":
+    			pt=3;
+    			break;
+    		default: break;
+    	}
+    	teamTwoPoints.setText( Integer.toString(Integer.valueOf(teamTwoPoints.getText())+pt) );
     	updatePB();
     }
     

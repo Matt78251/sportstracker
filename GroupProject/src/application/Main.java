@@ -16,7 +16,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			URL url = new File("src/Main.fxml").toURI().toURL();
+			URL url = new File("src/application/view/Main.fxml").toURI().toURL();
 			AnchorPane root = (AnchorPane)FXMLLoader.load(url);
 			Scene scene = new Scene(root,800,800);
 			primaryStage.setScene(scene);
