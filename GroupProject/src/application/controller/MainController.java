@@ -25,7 +25,7 @@ public class MainController {
 	
     @FXML
     void handleSecondView(ActionEvent event) throws IOException {							//Handles the event where user wants to go to the ThirdView (aka Classifieds)
-    	URL url = new File("src/application/view/Basketball.fxml").toURI().toURL();
+    	URL url = new File("src/application/view/SportsMenu.fxml").toURI().toURL();
 		//Parent root = FXMLLoader.load(url);
         mainPane = FXMLLoader.load(url);// pane you are GOING TO
         Scene scene = new Scene(mainPane);// pane you are GOING TO show
