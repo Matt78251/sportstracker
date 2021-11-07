@@ -1,16 +1,27 @@
 package application.controller;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Timer;
 import java.util.TimerTask;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.scene.layout.AnchorPane;
 
 public class BasketballController {
+	
+	@FXML
+    private AnchorPane basketballPane;
 	
     @FXML
     private TextArea teamOnePoints;
@@ -212,6 +223,20 @@ public class BasketballController {
         	}
         }, 0, 1000);
     }
+   
+    
+    
+    @FXML
+    void backButton(ActionEvent event) throws IOException{
+    	URL url = new File("src/application/view/SportsMenu.fxml").toURI().toURL();
+		//Parent root = FXMLLoader.load(url);
+        basketballPane = FXMLLoader.load(url);// pane you are GOING TO
+        Scene scene = new Scene(basketballPane);// pane you are GOING TO show
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
+        window.setScene(scene);
+        window.show();
+    }
+    
     
 
 }
