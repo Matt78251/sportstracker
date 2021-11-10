@@ -161,6 +161,31 @@ public class GolfController {
     		player4Name.setText("Player 4");
     	}
     	
+    	int playerCount = noPlayer();
+    	
+    	
+    	
+    	if (playerCount == 1)
+    	{
+    		whoWins.setText(player1Name.getText().trim() + " wins!");
+    	}
+    	
+    	
+    	
+    	if(playerCount == 2)
+    	{
+    		if(p1total < p2total)
+        	{
+        		whoWins.setText(player1Name.getText().trim() + " wins!");
+        	}
+        	//player 2 won
+        	else if(p2total < p1total)
+        	{
+        		whoWins.setText(player2Name.getText().trim() + " wins!");
+        	}
+    	}
+    	
+    	
     	
     	//displaying who won the game
     	//player 1 won
@@ -467,6 +492,33 @@ public class GolfController {
     	String p4T = String.valueOf(p4tot);
     	
     	p4Total.setText(p4T);
+    }
+    
+    int noPlayer()
+    {
+    	int i = 0;
+    	if(player2Name.getText().trim().equals("Player 2"))
+    	{
+    		//there is no one playing as player 2, only 1 player
+    		i = 1;
+    		return 1;
+    	}
+    	
+    	if(player3Name.getText().trim().equals("Player 3"))
+    	{
+    		//there is no one playing as player 3, only 2 players
+    		i = 2;
+    		return 2;
+    	}
+    	
+    	if(player4Name.getText().trim().equals("Player 4"))
+    	{
+    		//there is no one playing as player 4, only 3 players
+    		i = 3;
+    		return 3;
+    	}
+    	
+    	return i;
     }
 
 }
