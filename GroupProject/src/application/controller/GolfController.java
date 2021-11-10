@@ -22,6 +22,7 @@ public class GolfController {
     @FXML
     private Label whoWins;
     
+    //player 1 stuff
     @FXML
     private TextField player1Name;
     @FXML
@@ -45,6 +46,7 @@ public class GolfController {
     @FXML
     private TextField p1Total;
     
+    //player 2 stuff
     @FXML
     private TextField player2Name;
     @FXML
@@ -68,6 +70,54 @@ public class GolfController {
     @FXML
     private TextField p2Total;
     
+    //player 3 stuff
+    @FXML
+    private TextField player3Name;
+    @FXML
+    private TextField p3h1;
+    @FXML
+    private TextField p3h2;
+    @FXML
+    private TextField p3h3;
+    @FXML
+    private TextField p3h4;
+    @FXML
+    private TextField p3h5;
+    @FXML
+    private TextField p3h6;
+    @FXML
+    private TextField p3h7;
+    @FXML
+    private TextField p3h8;
+    @FXML
+    private TextField p3h9;
+    @FXML
+    private TextField p3Total;
+    
+    //player 4 stuff
+    @FXML
+    private TextField player4Name;
+    @FXML
+    private TextField p4h1;
+    @FXML
+    private TextField p4h2;
+    @FXML
+    private TextField p4h3;
+    @FXML
+    private TextField p4h4;
+    @FXML
+    private TextField p4h5;
+    @FXML
+    private TextField p4h6;
+    @FXML
+    private TextField p4h7;
+    @FXML
+    private TextField p4h8;
+    @FXML
+    private TextField p4h9;
+    @FXML
+    private TextField p4Total;
+    
     
     @FXML
     void backButton(ActionEvent event) throws IOException{
@@ -85,30 +135,58 @@ public class GolfController {
     	zeroCheck();
     	player1Total();
     	player2Total();
+    	player3Total();
+    	player4Total();
     	
     	int p1total = Integer.parseInt(p1Total.getText().trim());
     	int p2total = Integer.parseInt(p2Total.getText().trim());
+    	int p3total = Integer.parseInt(p3Total.getText().trim());
+    	int p4total = Integer.parseInt(p4Total.getText().trim());
     	
+    	//setting names equal to Player_ if not filled in by user
     	if(player1Name.getText().trim().equals(""))
     	{
     		player1Name.setText("Player 1");
     	}
-    	
     	if(player2Name.getText().trim().equals(""))
     	{
     		player2Name.setText("Player 2");
     	}
-    	
-    	if(p2total < p1total)
+    	if(player3Name.getText().trim().equals(""))
     	{
-    		whoWins.setText(player2Name.getText().trim() + " wins!");
+    		player3Name.setText("Player 3");
+    	}
+    	if(player4Name.getText().trim().equals(""))
+    	{
+    		player4Name.setText("Player 4");
     	}
     	
-    	if(p1total < p2total)
+    	
+    	//displaying who won the game
+    	//player 1 won
+    	if(p1total < p2total && p1total < p3total && p1total < p4total)
     	{
     		whoWins.setText(player1Name.getText().trim() + " wins!");
     	}
-    	
+    	//player 2 won
+    	else if(p2total < p1total && p2total < p3total && p2total < p4total)
+    	{
+    		whoWins.setText(player2Name.getText().trim() + " wins!");
+    	}
+    	//player 3 won
+    	else if(p3total < p1total && p3total < p2total && p3total < p4total)
+    	{
+    		whoWins.setText(player3Name.getText().trim() + " wins!");
+    	}
+    	//player 4 won
+    	else if(p4total < p1total && p4total < p2total && p4total < p3total)
+    	{
+    		whoWins.setText(player4Name.getText().trim() + " wins!");
+    	}
+    	//there was a draw
+    	else {
+    		whoWins.setText("Could Not Determine Winner");
+    	}
     	
     	
     }
@@ -123,7 +201,9 @@ public class GolfController {
     
     void zeroCheck()
     {
+    	//
     	//CHECK FOR PLAYER 1
+    	//
     	if(p1h1.getText().trim().equals(""))
     	{
     		p1h1.setText("0");
@@ -201,11 +281,91 @@ public class GolfController {
     		p2h9.setText("0");
     	}
     	
+    	//
+    	//CHECK FOR PLAYER 3
+    	//
+    	if(p3h1.getText().trim().equals(""))
+    	{
+    		p3h1.setText("0");
+    	}
+    	if(p3h2.getText().trim().equals(""))
+    	{
+    		p3h2.setText("0");
+    	}
+    	if(p3h3.getText().trim().equals(""))
+    	{
+    		p3h3.setText("0");
+    	}
+    	if(p3h4.getText().trim().equals(""))
+    	{
+    		p3h4.setText("0");
+    	}
+    	if(p3h5.getText().trim().equals(""))
+    	{
+    		p3h5.setText("0");
+    	}
+    	if(p3h6.getText().trim().equals(""))
+    	{
+    		p3h6.setText("0");
+    	}
+    	if(p3h7.getText().trim().equals(""))
+    	{
+    		p3h7.setText("0");
+    	}
+    	if(p3h8.getText().trim().equals(""))
+    	{
+    		p3h8.setText("0");
+    	}
+    	if(p3h9.getText().trim().equals(""))
+    	{
+    		p3h9.setText("0");
+    	}
+    	
+    	//
+    	//CHECK FOR PLAYER 4
+    	//
+    	if(p4h1.getText().trim().equals(""))
+    	{
+    		p4h1.setText("0");
+    	}
+    	if(p4h2.getText().trim().equals(""))
+    	{
+    		p4h2.setText("0");
+    	}
+    	if(p4h3.getText().trim().equals(""))
+    	{
+    		p4h3.setText("0");
+    	}
+    	if(p4h4.getText().trim().equals(""))
+    	{
+    		p4h4.setText("0");
+    	}
+    	if(p4h5.getText().trim().equals(""))
+    	{
+    		p4h5.setText("0");
+    	}
+    	if(p4h6.getText().trim().equals(""))
+    	{
+    		p4h6.setText("0");
+    	}
+    	if(p4h7.getText().trim().equals(""))
+    	{
+    		p4h7.setText("0");
+    	}
+    	if(p4h8.getText().trim().equals(""))
+    	{
+    		p4h8.setText("0");
+    	}
+    	if(p4h9.getText().trim().equals(""))
+    	{
+    		p4h9.setText("0");
+    	}
+    	
     }
     
     
     
-    
+    //gets the info player 1 and adds to array list, calculates total, and displays total
     void player1Total()
     {
     	ArrayList<Integer> player1Info = new ArrayList<Integer>();
@@ -231,6 +391,7 @@ public class GolfController {
     	p1Total.setText(p1T);
     }
     
+  //gets the info player 2 and adds to array list, calculates total, and displays total
     void player2Total()
     {
     	ArrayList<Integer> player2Info = new ArrayList<Integer>();
@@ -254,6 +415,58 @@ public class GolfController {
     	String p2T = String.valueOf(p2tot);
     	
     	p2Total.setText(p2T);
+    }
+    
+  //gets the info player 3 and adds to array list, calculates total, and displays total
+    void player3Total()
+    {
+    	ArrayList<Integer> player3Info = new ArrayList<Integer>();
+    	
+    	player3Info.add(Integer.parseInt(p3h1.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h2.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h3.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h4.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h5.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h6.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h7.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h8.getText().trim()));
+    	player3Info.add(Integer.parseInt(p3h9.getText().trim()));
+    	
+    	int p3tot = 0;
+    	for(int i = 0; i < 9; i++)
+    	{
+    		p3tot += player3Info.get(i);
+    	}
+    	
+    	String p3T = String.valueOf(p3tot);
+    	
+    	p3Total.setText(p3T);
+    }
+    
+  //gets the info player 4 and adds to array list, calculates total, and displays total
+    void player4Total()
+    {
+    	ArrayList<Integer> player4Info = new ArrayList<Integer>();
+    	
+    	player4Info.add(Integer.parseInt(p4h1.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h2.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h3.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h4.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h5.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h6.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h7.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h8.getText().trim()));
+    	player4Info.add(Integer.parseInt(p4h9.getText().trim()));
+    	
+    	int p4tot = 0;
+    	for(int i = 0; i < 9; i++)
+    	{
+    		p4tot += player4Info.get(i);
+    	}
+    	
+    	String p4T = String.valueOf(p4tot);
+    	
+    	p4Total.setText(p4T);
     }
 
 }
