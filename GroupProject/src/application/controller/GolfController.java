@@ -167,6 +167,7 @@ public class GolfController {
     	
     	if (playerCount == 1)
     	{
+    		//only 1 player, therefore only player 1 could win
     		whoWins.setText(player1Name.getText().trim() + " wins!");
     	}
     	
@@ -174,6 +175,7 @@ public class GolfController {
     	
     	if(playerCount == 2)
     	{
+    		//player 1 won
     		if(p1total < p2total)
         	{
         		whoWins.setText(player1Name.getText().trim() + " wins!");
@@ -185,32 +187,49 @@ public class GolfController {
         	}
     	}
     	
+    	if(playerCount == 3)
+    	{
+    		//player 1 won
+    		if(p1total < p2total && p1total < p3total)
+        	{
+        		whoWins.setText(player1Name.getText().trim() + " wins!");
+        	}
+        	//player 2 won
+        	else if(p2total < p1total && p2total < p3total)
+        	{
+        		whoWins.setText(player2Name.getText().trim() + " wins!");
+        	}
+        	//player 3 won
+        	else if(p3total < p1total && p3total < p2total)
+        	{
+        		whoWins.setText(player3Name.getText().trim() + " wins!");
+        	}
+    	}
     	
     	
-    	//displaying who won the game
-    	//player 1 won
-    	if(p1total < p2total && p1total < p3total && p1total < p4total)
+    	if(playerCount == 4)
     	{
-    		whoWins.setText(player1Name.getText().trim() + " wins!");
-    	}
-    	//player 2 won
-    	else if(p2total < p1total && p2total < p3total && p2total < p4total)
-    	{
-    		whoWins.setText(player2Name.getText().trim() + " wins!");
-    	}
-    	//player 3 won
-    	else if(p3total < p1total && p3total < p2total && p3total < p4total)
-    	{
-    		whoWins.setText(player3Name.getText().trim() + " wins!");
-    	}
-    	//player 4 won
-    	else if(p4total < p1total && p4total < p2total && p4total < p3total)
-    	{
-    		whoWins.setText(player4Name.getText().trim() + " wins!");
-    	}
-    	//there was a draw
-    	else {
-    		whoWins.setText("Could Not Determine Winner");
+    		//displaying who won the game
+        	//player 1 won
+        	if(p1total < p2total && p1total < p3total && p1total < p4total)
+        	{
+        		whoWins.setText(player1Name.getText().trim() + " wins!");
+        	}
+        	//player 2 won
+        	else if(p2total < p1total && p2total < p3total && p2total < p4total)
+        	{
+        		whoWins.setText(player2Name.getText().trim() + " wins!");
+        	}
+        	//player 3 won
+        	else if(p3total < p1total && p3total < p2total && p3total < p4total)
+        	{
+        		whoWins.setText(player3Name.getText().trim() + " wins!");
+        	}
+        	//player 4 won
+        	else if(p4total < p1total && p4total < p2total && p4total < p3total)
+        	{
+        		whoWins.setText(player4Name.getText().trim() + " wins!");
+        	}
     	}
     	
     	
@@ -496,29 +515,25 @@ public class GolfController {
     
     int noPlayer()
     {
-    	int i = 0;
     	if(player2Name.getText().trim().equals("Player 2"))
     	{
     		//there is no one playing as player 2, only 1 player
-    		i = 1;
     		return 1;
     	}
     	
     	if(player3Name.getText().trim().equals("Player 3"))
     	{
     		//there is no one playing as player 3, only 2 players
-    		i = 2;
     		return 2;
     	}
     	
     	if(player4Name.getText().trim().equals("Player 4"))
     	{
     		//there is no one playing as player 4, only 3 players
-    		i = 3;
     		return 3;
     	}
     	
-    	return i;
+    	return 4;
     }
 
 }
