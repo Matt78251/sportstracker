@@ -1,16 +1,20 @@
 package application.controller;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -21,6 +25,9 @@ public class GolfController {
     
     @FXML
     private Label whoWins;
+    
+    @FXML
+    private PieChart pieChart;
     
     //player 1 stuff
     @FXML
@@ -185,6 +192,11 @@ public class GolfController {
         	{
         		whoWins.setText(player2Name.getText().trim() + " wins!");
         	}
+    		
+        	else if(p1total == p2total)
+                	{
+                		whoWins.setText("There Is A Tie!");
+                	}
     	}
     	
     	if(playerCount == 3)
@@ -204,6 +216,11 @@ public class GolfController {
         	{
         		whoWins.setText(player3Name.getText().trim() + " wins!");
         	}
+    		
+        	else if(p1total == p2total || p1total == p3total || p2total == p3total)
+                	{
+                		whoWins.setText("There Is A Tie!");
+                	}
     	}
     	
     	
@@ -230,6 +247,21 @@ public class GolfController {
         	{
         		whoWins.setText(player4Name.getText().trim() + " wins!");
         	}
+        	else if(p1total == p2total || p1total == p3total || 
+        	p1total == p4total || p2total == p3total || p2total == p4total || p3total == p4total)
+        	{
+        		whoWins.setText("There Is A Tie!");
+        	}
+        	
+        	
+        	
+        	ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+        			new PieChart.Data(player1Name.getText().trim(), p1total), 
+        	        new PieChart.Data(player2Name.getText().trim(), p2total), 
+        	        new PieChart.Data(player3Name.getText().trim(), p3total), 
+        	        new PieChart.Data(player4Name.getText().trim(), p4total));
+        	
+        	pieChart.setData(pieChartData);
     	}
     	
     	
@@ -534,6 +566,54 @@ public class GolfController {
     	}
     	
     	return 4;
+    }
+    
+    @FXML
+    void resetButton(ActionEvent event) {
+    	pieChart.setOpacity(0.0);
+    	p1h1.setText("");
+    	p1h2.setText("");
+    	p1h3.setText("");
+    	p1h4.setText("");
+    	p1h5.setText("");
+    	p1h6.setText("");
+    	p1h7.setText("");
+    	p1h8.setText("");
+    	p1h9.setText("");
+    	p1Total.setText("");
+    	
+    	p2h1.setText("");
+    	p2h2.setText("");
+    	p2h3.setText("");
+    	p2h4.setText("");
+    	p2h5.setText("");
+    	p2h6.setText("");
+    	p2h7.setText("");
+    	p2h8.setText("");
+    	p2h9.setText("");
+    	p2Total.setText("");
+    	
+    	p3h1.setText("");
+    	p3h2.setText("");
+    	p3h3.setText("");
+    	p3h4.setText("");
+    	p3h5.setText("");
+    	p3h6.setText("");
+    	p3h7.setText("");
+    	p3h8.setText("");
+    	p3h9.setText("");
+    	p3Total.setText("");
+    	
+    	p4h1.setText("");
+    	p4h2.setText("");
+    	p4h3.setText("");
+    	p4h4.setText("");
+    	p4h5.setText("");
+    	p4h6.setText("");
+    	p4h7.setText("");
+    	p4h8.setText("");
+    	p4h9.setText("");
+    	p4Total.setText("");
     }
 
 }
