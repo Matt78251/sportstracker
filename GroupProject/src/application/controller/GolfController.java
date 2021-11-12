@@ -588,6 +588,7 @@ public class GolfController {
     	
     	whoWins.setText("");
     	
+    	
     	pieChart.setOpacity(0.0);
     	
     	p1h1.setText("");
