@@ -39,16 +39,16 @@
             <Label layoutX="520.0" layoutY="90.0" text="Total" textAlignment="CENTER" />
             <Button layoutX="95.0" layoutY="462.0" mnemonicParsing="false" onAction="#totalsButton" prefHeight="40.0" prefWidth="150.0" text="Caclulate Totals" />
             <TextField fx:id="player2Name" layoutX="4.0" layoutY="200.0" prefHeight="40.0" prefWidth="120.0" promptText="Enter Player2 Name" />
-            <TextField fx:id="p2h1" layoutX="130.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h2" layoutX="170.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h3" layoutX="210.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h4" layoutX="250.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h5" layoutX="290.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h6" layoutX="330.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h7" layoutX="370.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h8" layoutX="410.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2h9" layoutX="450.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
-            <TextField fx:id="p2Total" layoutX="520.0" layoutY="200.0" prefHeight="40.0" prefWidth="50.0" />
+            <TextField fx:id="p2h1" alignment="CENTER" layoutX="130.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h2" alignment="CENTER" layoutX="170.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h3" alignment="CENTER" layoutX="210.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h4" alignment="CENTER" layoutX="250.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h5" alignment="CENTER" layoutX="290.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h6" alignment="CENTER" layoutX="330.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h7" alignment="CENTER" layoutX="370.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h8" alignment="CENTER" layoutX="410.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2h9" alignment="CENTER" layoutX="450.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
+            <TextField fx:id="p2Total" alignment="CENTER" layoutX="520.0" layoutY="200.0" prefHeight="40.0" prefWidth="50.0" />
             <Label fx:id="whoWins" alignment="CENTER" layoutX="20.0" layoutY="383.0" prefHeight="50.0" prefWidth="300.0" textAlignment="CENTER">
                <font>
                   <Font size="30.0" />

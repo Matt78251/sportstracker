@@ -176,6 +176,10 @@ public class GolfController {
     	{
     		//only 1 player, therefore only player 1 could win
     		whoWins.setText(player1Name.getText().trim() + " wins!");
+    		
+    		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+        			new PieChart.Data(player1Name.getText().trim(), p1total));
+        	pieChart.setData(pieChartData);
     	}
     	
     	
@@ -197,6 +201,11 @@ public class GolfController {
                 	{
                 		whoWins.setText("There Is A Tie!");
                 	}
+    		
+    		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+        			new PieChart.Data(player1Name.getText().trim(), p1total), 
+        	        new PieChart.Data(player2Name.getText().trim(), p2total));
+        	pieChart.setData(pieChartData);
     	}
     	
     	if(playerCount == 3)
@@ -221,6 +230,12 @@ public class GolfController {
                 	{
                 		whoWins.setText("There Is A Tie!");
                 	}
+    		
+    		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+        			new PieChart.Data(player1Name.getText().trim(), p1total), 
+        	        new PieChart.Data(player2Name.getText().trim(), p2total), 
+        	        new PieChart.Data(player3Name.getText().trim(), p3total));
+        	pieChart.setData(pieChartData);
     	}
     	
     	
@@ -570,7 +585,11 @@ public class GolfController {
     
     @FXML
     void resetButton(ActionEvent event) {
+    	
+    	whoWins.setText("");
+    	
     	pieChart.setOpacity(0.0);
+    	
     	p1h1.setText("");
     	p1h2.setText("");
     	p1h3.setText("");
