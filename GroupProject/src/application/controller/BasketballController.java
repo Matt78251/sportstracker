@@ -3,8 +3,12 @@ package application.controller;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import application.Main;
+import application.model.GraphEvent;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
@@ -63,6 +67,8 @@ public class BasketballController {
     	}
     	teamOnePoints.setText( Integer.toString(Integer.valueOf(teamOnePoints.getText())+pt) );
     	updatePB();
+    	Date date = new Date();
+    	Main.GraphEvents.add(new GraphEvent(date.getTime(), "Team 1", pt) );
     }
 
     @FXML
@@ -83,6 +89,8 @@ public class BasketballController {
     	}
     	teamTwoPoints.setText( Integer.toString(Integer.valueOf(teamTwoPoints.getText())+pt) );
     	updatePB();
+    	Date date = new Date();
+    	Main.GraphEvents.add(new GraphEvent(date.getTime(), "Team 2", pt) );
     }
     
     @FXML
@@ -177,6 +185,22 @@ public class BasketballController {
     @FXML
     void stopTime(ActionEvent event) {
     	myTimer.cancel();
+    }
+    
+    @FXML
+    void startGame(ActionEvent event) {
+    	Main.gameStartTime = new Date().getTime();
+    	System.out.println(Main.gameStartTime);
+    }
+    
+    @FXML
+    void endGame(ActionEvent event) throws IOException {
+    	URL url = new File("src/application/view/BasketballGraph.fxml").toURI().toURL();
+        basketballPane = FXMLLoader.load(url);// pane you are GOING TO
+        Scene scene = new Scene(basketballPane);// pane you are GOING TO show
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
+        window.setScene(scene);
+        window.show();
     }
     
     @FXML

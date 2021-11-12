@@ -2,7 +2,9 @@ package application;
 	
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 
+import application.model.GraphEvent;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -13,6 +15,11 @@ import javafx.scene.layout.BorderPane;
 
 //test
 public class Main extends Application {
+	
+	
+	public static long gameStartTime;
+	public static ArrayList<GraphEvent> GraphEvents = new ArrayList<GraphEvent>();
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {

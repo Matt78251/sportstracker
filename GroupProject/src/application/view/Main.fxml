@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -9,7 +12,16 @@
    <children>
       <AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="800.0">
          <children>
-            <Button layoutX="372.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleSecondView" text="Play" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#98d3a8" height="800.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+            <Button layoutX="250.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleSecondView" prefHeight="135.0" prefWidth="301.0" text="Start">
+               <font>
+                  <Font name="Cambria Math" size="63.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="506.0" layoutX="147.0" layoutY="155.0" pickOnBounds="true">
+               <image>
+                  <Image url="./logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

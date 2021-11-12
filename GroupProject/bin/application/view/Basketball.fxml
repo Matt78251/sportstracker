@@ -43,6 +43,8 @@
             <Button layoutX="1022.0" layoutY="419.0" mnemonicParsing="false" onAction="#addPointTeamTwo" prefHeight="74.0" prefWidth="193.0" text="Free Throw" />
             <Button layoutX="1022.0" layoutY="586.0" mnemonicParsing="false" onAction="#addPointTeamTwo" prefHeight="74.0" prefWidth="193.0" text="Three Pointer" />
             <Button layoutX="1185.0" layoutY="13.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+            <Button layoutX="617.0" layoutY="118.0" mnemonicParsing="false" onAction="#startGame" text="Start Game" />
+            <Button layoutX="620.0" layoutY="167.0" mnemonicParsing="false" onAction="#endGame" text="End Game" />
          </children>
       </AnchorPane>
    </children>
