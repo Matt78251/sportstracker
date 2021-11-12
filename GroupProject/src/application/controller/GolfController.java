@@ -23,6 +23,7 @@ public class GolfController {
     @FXML
     private AnchorPane golfPane;
     
+    
     @FXML
     private Label whoWins;
     
