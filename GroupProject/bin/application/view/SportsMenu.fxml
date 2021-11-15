@@ -24,7 +24,7 @@
                   <DropShadow />
                </effect>
             </Label>
-            <Button layoutX="572.0" layoutY="299.0" mnemonicParsing="false" onAction="#basketballButton" prefHeight="39.0" prefWidth="109.0" text="Basketball" />
+            <Button layoutX="575.0" layoutY="300.0" mnemonicParsing="false" onAction="#basketballButton" prefHeight="40.0" prefWidth="120.0" text="Basketball" />
             <Label layoutX="513.0" layoutY="205.0" text="Western Sports" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS" size="30.0" />
@@ -33,9 +33,10 @@
                   <DropShadow />
                </effect>
             </Label>
-            <Button layoutX="572.0" layoutY="247.0" mnemonicParsing="false" onAction="#footballButton" prefHeight="39.0" prefWidth="109.0" text="Football" />
-            <Button layoutX="572.0" layoutY="349.0" mnemonicParsing="false" onAction="#golfButton" prefHeight="39.0" prefWidth="109.0" text="Golf" />
-            <Button layoutX="572.0" layoutY="400.0" mnemonicParsing="false" onAction="#hockeyButton" prefHeight="39.0" prefWidth="109.0" text="Hockey" />
+            <Button layoutX="575.0" layoutY="250.0" mnemonicParsing="false" onAction="#footballButton" prefHeight="40.0" prefWidth="120.0" text="Football" />
+            <Button layoutX="575.0" layoutY="350.0" mnemonicParsing="false" onAction="#golfButton" prefHeight="40.0" prefWidth="120.0" text="Golf" />
+            <Button layoutX="575.0" layoutY="400.0" mnemonicParsing="false" onAction="#hockeyButton" prefHeight="40.0" prefWidth="120.0" text="Hockey" />
+            <Button layoutX="575.0" layoutY="450.0" mnemonicParsing="false" onAction="#soccerButton" prefHeight="40.0" prefWidth="120.0" text="Soccer" />
          </children>
       </AnchorPane>
    </children>

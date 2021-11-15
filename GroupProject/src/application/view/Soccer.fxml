@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.controller.SoccerController">
+   <children>
+      <AnchorPane fx:id="soccerPane" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="soccerfield.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="721.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButton" prefHeight="20.0" prefWidth="70.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

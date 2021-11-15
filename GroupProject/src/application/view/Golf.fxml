@@ -37,7 +37,7 @@
             <TextField fx:id="p1h9" alignment="CENTER" layoutX="450.0" layoutY="140.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p1Total" alignment="CENTER" layoutX="520.0" layoutY="140.0" prefHeight="40.0" prefWidth="50.0" />
             <Label layoutX="520.0" layoutY="90.0" text="Total" textAlignment="CENTER" />
-            <Button layoutX="110.0" layoutY="426.0" mnemonicParsing="false" onAction="#totalsButton" prefHeight="40.0" prefWidth="150.0" text="Caclulate Totals" />
+            <Button layoutX="50.0" layoutY="425.0" mnemonicParsing="false" onAction="#totalsButton" prefHeight="40.0" prefWidth="150.0" text="Caclulate Totals" />
             <TextField fx:id="player2Name" layoutX="4.0" layoutY="200.0" prefHeight="40.0" prefWidth="120.0" promptText="Enter Player2 Name" />
             <TextField fx:id="p2h1" alignment="CENTER" layoutX="130.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p2h2" alignment="CENTER" layoutX="170.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
@@ -49,9 +49,9 @@
             <TextField fx:id="p2h8" alignment="CENTER" layoutX="410.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p2h9" alignment="CENTER" layoutX="450.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p2Total" alignment="CENTER" layoutX="520.0" layoutY="200.0" prefHeight="40.0" prefWidth="50.0" />
-            <Label fx:id="whoWins" alignment="CENTER" layoutX="50.0" layoutY="366.0" prefHeight="50.0" prefWidth="300.0" textAlignment="CENTER">
+            <Label fx:id="whoWins" layoutX="50.0" layoutY="366.0" prefHeight="50.0" prefWidth="300.0">
                <font>
-                  <Font size="30.0" />
+                  <Font name="System Bold" size="30.0" />
                </font>
             </Label>
             <TextField fx:id="player3Name" layoutX="4.0" layoutY="260.0" prefHeight="40.0" prefWidth="120.0" promptText="Enter Player3 Name" />
@@ -85,8 +85,8 @@
             <Label layoutX="385.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="7" textAlignment="CENTER" />
             <Label layoutX="425.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="8" textAlignment="CENTER" />
             <Label layoutX="465.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="9" textAlignment="CENTER" />
-            <Button layoutX="110.0" layoutY="478.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="40.0" prefWidth="150.0" text="Reset Scores" />
-            <PieChart fx:id="pieChart" layoutX="325.0" layoutY="391.0" prefHeight="173.0" prefWidth="224.0" />
+            <Button layoutX="50.0" layoutY="478.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="40.0" prefWidth="150.0" text="Reset Scores" />
+            <PieChart fx:id="pieChart" layoutX="250.0" layoutY="378.0" legendSide="RIGHT" prefHeight="211.0" prefWidth="343.0" />
          </children></AnchorPane>
    </children>
 </AnchorPane>

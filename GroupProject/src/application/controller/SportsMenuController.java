@@ -69,6 +69,18 @@ public class SportsMenuController {
         window.show();
     	
     }
+    
+    @FXML
+    void soccerButton(ActionEvent event) throws IOException{
+    	URL url = new File("src/application/view/Soccer.fxml").toURI().toURL();
+		//Parent root = FXMLLoader.load(url);
+        menuPane = FXMLLoader.load(url);// pane you are GOING TO
+        Scene scene = new Scene(menuPane);// pane you are GOING TO show
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
+        window.setScene(scene);
+        window.show();
+    	
+    }
 
 }
 
