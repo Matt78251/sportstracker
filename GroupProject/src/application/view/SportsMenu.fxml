@@ -10,13 +10,13 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SportsMenuController">
    <children>
-      <AnchorPane fx:id="menuPane" layoutY="-8.0" prefHeight="800.0" prefWidth="800.0">
+      <AnchorPane fx:id="menuPane" layoutY="-8.0" prefHeight="500.0" prefWidth="800.0">
          <children>
-            <ImageView fitHeight="792.0" fitWidth="800.0" layoutY="8.0" pickOnBounds="true" smooth="false">
+            <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" smooth="false">
                <image>
                   <Image url="field image.jfif" />
                </image></ImageView>
-            <Label layoutX="231.0" layoutY="91.0" text="Select Your Sport" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="230.0" layoutY="56.0" text="Select Your Sport" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS" size="40.0" />
                </font>
@@ -24,19 +24,11 @@
                   <DropShadow />
                </effect>
             </Label>
-            <Button layoutX="575.0" layoutY="300.0" mnemonicParsing="false" onAction="#basketballButton" prefHeight="40.0" prefWidth="120.0" text="Basketball" />
-            <Label layoutX="513.0" layoutY="205.0" text="Western Sports" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Comic Sans MS" size="30.0" />
-               </font>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <Button layoutX="575.0" layoutY="250.0" mnemonicParsing="false" onAction="#footballButton" prefHeight="40.0" prefWidth="120.0" text="Football" />
-            <Button layoutX="575.0" layoutY="350.0" mnemonicParsing="false" onAction="#golfButton" prefHeight="40.0" prefWidth="120.0" text="Golf" />
-            <Button layoutX="575.0" layoutY="400.0" mnemonicParsing="false" onAction="#hockeyButton" prefHeight="40.0" prefWidth="120.0" text="Hockey" />
-            <Button layoutX="575.0" layoutY="450.0" mnemonicParsing="false" onAction="#soccerButton" prefHeight="40.0" prefWidth="120.0" text="Soccer" />
+            <Button layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#basketballButton" prefHeight="40.0" prefWidth="120.0" text="Basketball" />
+            <Button layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#footballButton" prefHeight="40.0" prefWidth="120.0" text="Football" />
+            <Button layoutX="200.0" layoutY="400.0" mnemonicParsing="false" onAction="#golfButton" prefHeight="40.0" prefWidth="120.0" text="Golf" />
+            <Button layoutX="450.0" layoutY="200.0" mnemonicParsing="false" onAction="#hockeyButton" prefHeight="40.0" prefWidth="120.0" text="Hockey" />
+            <Button layoutX="450.0" layoutY="300.0" mnemonicParsing="false" onAction="#soccerButton" prefHeight="40.0" prefWidth="120.0" text="Soccer" />
          </children>
       </AnchorPane>
    </children>
