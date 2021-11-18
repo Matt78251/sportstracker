@@ -16,7 +16,7 @@
                   <Image url="soccerfield.jpg" />
                </image>
             </ImageView>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="721.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButton" prefHeight="20.0" prefWidth="70.0" text="Back" textAlignment="CENTER" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="720.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButton" prefHeight="20.0" prefWidth="70.0" text="Back" textAlignment="CENTER" />
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="110.0" layoutY="230.0" mnemonicParsing="false" onAction="#addAGoal" prefHeight="40.0" prefWidth="80.0" text="GOAL" textAlignment="CENTER" />
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="610.0" layoutY="230.0" mnemonicParsing="false" onAction="#addBGoal" prefHeight="40.0" prefWidth="80.0" text="GOAL" textAlignment="CENTER" />
             <TextField fx:id="teamAName" alignment="CENTER" layoutX="50.0" layoutY="60.0" prefHeight="40.0" prefWidth="200.0" promptText="Enter Team A">

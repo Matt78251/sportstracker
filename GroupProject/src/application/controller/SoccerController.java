@@ -106,7 +106,8 @@ public class SoccerController {
     @FXML
     void nextPeriodButton(ActionEvent event) {
     	//AKA THE END GAME BUTTON
-    	//team a wins
+    	//team a wins 
+    	
     	if(teamAScore > teamBScore)
     	{
     		System.out.println(teamAp1);
