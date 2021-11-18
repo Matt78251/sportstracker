@@ -50,8 +50,10 @@ public class SoccerController {
     private AnchorPane soccerPane;
     
     public int teamAScore = 0;
+    public int teamAScoreArr = 0;
     public int teamBScore = 0;
-    public int periodNum = 1;
+    public int teamBScoreArr = 0;
+    public int periodNum = 0;
     
     @FXML
     private Label timerLabel;
@@ -65,44 +67,74 @@ public class SoccerController {
     public int seconds = 0;
     public int minutes = 0;
     
-    ArrayList<Integer> teamAarr1 = new ArrayList<Integer>();
-    ArrayList<Integer> teamBarr1 = new ArrayList<Integer>();
+    ArrayList<Integer> teamAp1 = new ArrayList<Integer>();
+    ArrayList<Integer> teamBp1 = new ArrayList<Integer>();
+    ArrayList<Integer> teamAp2 = new ArrayList<Integer>();
+    ArrayList<Integer> teamBp2 = new ArrayList<Integer>();
+    ArrayList<Integer> teamAp3 = new ArrayList<Integer>();
+    ArrayList<Integer> teamBp3 = new ArrayList<Integer>();
+    ArrayList<Integer> teamAp4 = new ArrayList<Integer>();
+    ArrayList<Integer> teamBp4 = new ArrayList<Integer>();
     
     @FXML
     void addAGoal(ActionEvent event) {
-    	teamAScore++;
-    	String strA = String.valueOf(teamAScore);  
-    	teamAPoints.setText(strA);
-    	teamAarr1.add(teamAScore);
+    	
+    	if(timerLabel.getText().trim().equals("00:00"))
+		{
+    		//Does nothing
+		}
+    	else {
+    		teamAScore++;
+    		String strA = String.valueOf(teamAScore);  
+    		teamAPoints.setText(strA);
+    	}
     }
 
     @FXML
     void addBGoal(ActionEvent event) {
-    	teamBScore++;
-    	String strB = String.valueOf(teamBScore);  
-    	teamBPoints.setText(strB);
-    	teamBarr1.add(teamBScore);
+    	if(timerLabel.getText().trim().equals("00:00"))
+		{
+    		//does nothing
+		}
+    	else {
+    		teamBScore++;
+    		String strB = String.valueOf(teamBScore);  
+    		teamBPoints.setText(strB);
+    	}
     }
     
     @FXML
     void nextPeriodButton(ActionEvent event) {
-    	periodNum++;
-    	if(periodNum > 4)
+    	//AKA THE END GAME BUTTON
+    	//team a wins
+    	if(teamAScore > teamBScore)
     	{
-    		//team a wins
-    		if(teamAScore > teamBScore)
-    		{
-    			teamAWin.setOpacity(1);
-    		}
-    		//team b wins
-    		if(teamBScore > teamAScore)
-    		{
-    			teamBWin.setOpacity(1);
-    		}
+    		System.out.println(teamAp1);
+    		System.out.println(teamAp2);
+    		System.out.println(teamAp3);
+    		System.out.println(teamAp4);
+    		teamAWin.setText(teamAName.getText().trim() + " WIN!");
+    		teamAWin.setOpacity(1);
+    	}
+    	//team b wins
+    	if(teamBScore > teamAScore)
+    	{
+    		System.out.println(teamBp1);
+    		System.out.println(teamBp2);
+    		System.out.println(teamBp3);
+    		System.out.println(teamBp4);
+    		teamBWin.setText(teamBName.getText().trim() + " WIN!");
+    		teamBWin.setOpacity(1);
     	}
     	
+    }
+    
+    void periodStuff()
+    {
+    	periodNum++;
     	if(periodNum == 4)
     	{
+    		periodBut.setOpacity(1);
     		periodBut.setText("End Game");
     	}
     	
@@ -111,12 +143,17 @@ public class SoccerController {
     		String strP = String.valueOf(periodNum);  
     		period.setText(strP);
     	}
+    	
+    	if(periodNum > 4)
+    	{
+    		myTimer.cancel();
+    	}
     }
     
     
     @FXML
     void startTime(ActionEvent event) {
-    	
+    	periodStuff();
     	//
     	//PLEASE PRESS STOP ON THE TIMER IF ITS NOT FULLY RUN OUT
     	//
@@ -150,6 +187,29 @@ public class SoccerController {
         			if((minutes == 0) && (seconds == 0))
         			{
         				myTimer.cancel();
+        				if(periodNum == 1)
+        	    		{
+        	    			teamAp1.add(teamAScore);
+        	    			teamBp1.add(teamBScore);
+        	    		}
+        	    		if(periodNum == 2)
+        	    		{
+        	    			teamAp2.add(teamAScore);
+        	    			teamBp2.add(teamBScore);
+        	    		}
+        	    		if(periodNum == 3)
+        	    		{
+        	    			teamAp3.add(teamAScore);
+        	    			teamBp3.add(teamBScore);
+        	    		}
+        	    		if(periodNum == 4)
+        	    		{
+        	    			teamAp4.add(teamAScore);
+        	    			teamBp4.add(teamBScore);
+        	    		}
+        	    		
+        	    		
+        	    		
         			}
         			//int to string for textfield
         			String str = String.valueOf(seconds);
