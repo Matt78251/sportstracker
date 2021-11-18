@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 public class SoccerController {
 	
 	
+	
 	@FXML
     private TextField teamAName;
 

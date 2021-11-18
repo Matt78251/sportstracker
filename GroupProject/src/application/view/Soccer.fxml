@@ -55,7 +55,7 @@
                   <Font size="25.0" />
                </font>
             </Label>
-            <Button fx:id="periodBut" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="410.0" mnemonicParsing="false" onAction="#nextPeriodButton" prefHeight="39.0" prefWidth="100.0" text="Next Period" textAlignment="CENTER" />
+            <Button fx:id="periodBut" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="410.0" mnemonicParsing="false" onAction="#nextPeriodButton" prefHeight="40.0" prefWidth="100.0" text="Next Period" textAlignment="CENTER" />
             <Label fx:id="teamAWin" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="330.0" opacity="0.0" text="WINNER" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="40.0" />

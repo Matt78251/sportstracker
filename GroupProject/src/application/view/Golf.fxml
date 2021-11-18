@@ -24,7 +24,7 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="50.0" layoutY="96.0" text="HOLE #" />
+            <Label layoutX="50.0" layoutY="95.0" text="HOLE #" />
             <TextField fx:id="player1Name" layoutX="4.0" layoutY="140.0" prefHeight="40.0" prefWidth="120.0" promptText="Enter Player1 Name" />
             <TextField fx:id="p1h1" alignment="CENTER" layoutX="130.0" layoutY="140.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p1h2" alignment="CENTER" layoutX="170.0" layoutY="140.0" prefHeight="40.0" prefWidth="40.0" />

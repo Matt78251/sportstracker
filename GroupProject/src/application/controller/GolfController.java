@@ -19,7 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class GolfController {
-
+ 
     @FXML
     private AnchorPane golfPane;
     
