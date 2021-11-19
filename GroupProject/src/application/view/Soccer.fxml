@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -66,6 +67,8 @@
                   <Font name="System Bold" size="40.0" />
                </font>
             </Label>
+            <PieChart fx:id="teamBpiechart" layoutX="50.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" />
+            <PieChart fx:id="teamApiechart" layoutX="550.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </AnchorPane>
    </children>

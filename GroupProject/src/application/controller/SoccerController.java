@@ -10,11 +10,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -30,6 +33,8 @@ public class SoccerController {
     
     @FXML
     private Label teamAWin;
+    @FXML
+    private PieChart teamApiechart;
 
     @FXML
     private TextField teamBName;
@@ -39,6 +44,9 @@ public class SoccerController {
     
     @FXML
     private Label teamBWin;
+    
+    @FXML
+    private PieChart teamBpiechart;
     
     @FXML
     private TextField period;
@@ -66,7 +74,7 @@ public class SoccerController {
     private Timer myTimer;
     public int seconds = 0;
     public int minutes = 0;
-    
+    //arraylists for data on pieChart
     ArrayList<Integer> teamAp1 = new ArrayList<Integer>();
     ArrayList<Integer> teamBp1 = new ArrayList<Integer>();
     ArrayList<Integer> teamAp2 = new ArrayList<Integer>();
@@ -116,6 +124,10 @@ public class SoccerController {
     		System.out.println(teamAp4);
     		teamAWin.setText(teamAName.getText().trim() + " WIN!");
     		teamAWin.setOpacity(1);
+    		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+        			new PieChart.Data(teamAName.getText().trim(), teamAScore),
+        			new PieChart.Data(teamBName.getText().trim(), teamBScore));
+        	teamApiechart.setData(pieChartData);
     	}
     	//team b wins
     	if(teamBScore > teamAScore)
@@ -126,7 +138,14 @@ public class SoccerController {
     		System.out.println(teamBp4);
     		teamBWin.setText(teamBName.getText().trim() + " WIN!");
     		teamBWin.setOpacity(1);
+    		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+        			new PieChart.Data(teamAName.getText().trim(), teamAScore),
+        			new PieChart.Data(teamBName.getText().trim(), teamBScore));
+        	teamBpiechart.setData(pieChartData);
     	}
+    	
+    	
+    	
     	
     }
     
