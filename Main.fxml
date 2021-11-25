@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="800.0">
+         <children>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" height="800.0" stroke="BLACK" strokeType="INSIDE" width="800.0">
+               <fill>
+                  <LinearGradient cycleMethod="REFLECT" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#b4dd98" />
+                        <Stop color="#5fa452" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill></Rectangle>
+            <Button layoutX="284.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleSecondView" prefHeight="0.0" prefWidth="232.0" text="Start">
+               <font>
+                  <Font name="Cambria Math" size="63.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="506.0" layoutX="147.0" layoutY="155.0" pickOnBounds="true">
+               <image>
+                  <Image url="./logo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="209.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- THE #1 Live Sports Points Tracking Software -" textAlignment="CENTER">
+               <font>
+                  <Font name="Wingdings 2" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="327.0" layoutY="743.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(c) 2021 - Symbiotes">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
