@@ -145,6 +145,7 @@ public class GolfController {
     	player2Total();
     	player3Total();
     	player4Total();
+    	pieChart.setOpacity(1.0);
     	
     	int p1total = Integer.parseInt(p1Total.getText().trim());
     	int p2total = Integer.parseInt(p2Total.getText().trim());

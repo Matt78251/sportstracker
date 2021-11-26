@@ -35,25 +35,25 @@ public class BasketballGraphController implements Initializable {
 		// TODO Auto-generated method stub
 		XYChart.Series team1 = new XYChart.Series();
         team1.setName("Team 1");        
-        
+
         XYChart.Series team2 = new XYChart.Series();
         team2.setName("Team 2");
-        
+
         for ( GraphEvent a : Main.GraphEvents) {
         	if ( a.getTeam().equals("Team 1")  ) {
         		team1Pts+=a.getPointDiff();
-        		team1.getData().add(new XYChart.Data(String.valueOf(a.getTimeOccured()-Main.gameStartTime), team1Pts));
-        		team2.getData().add(new XYChart.Data(String.valueOf(a.getTimeOccured()-Main.gameStartTime), team2Pts));
+        		team1.getData().add(new XYChart.Data(convertToString(a.getTimeOccured()), team1Pts));
+        		team2.getData().add(new XYChart.Data(convertToString(a.getTimeOccured()), team2Pts));
         	}
         	else {
         		team2Pts+=a.getPointDiff();
-        		team1.getData().add(new XYChart.Data(String.valueOf(a.getTimeOccured()-Main.gameStartTime), team1Pts));
-        		team2.getData().add(new XYChart.Data(String.valueOf(a.getTimeOccured()-Main.gameStartTime), team2Pts));
+        		team1.getData().add(new XYChart.Data(convertToString(a.getTimeOccured()), team1Pts));
+        		team2.getData().add(new XYChart.Data(convertToString(a.getTimeOccured()), team2Pts));
         	}
         }
-        
+
         graph.getData().addAll(team1,team2);
-        
+
         if ( team1Pts > team2Pts ) {
         	winnerText.setText("Team 1 Wins!");
         }
@@ -64,7 +64,43 @@ public class BasketballGraphController implements Initializable {
         	winnerText.setText("Tie Game!");
         }
 	}
-	
+
+	public String convertToString(Long a) {
+		String temp = "";
+		Long tmp = a-Main.gameStartTime;
+
+		tmp=tmp/1000;			// number of seconds
+		System.out.println(tmp);
+		if ( tmp > 3600 ) {
+			temp+=tmp/60+":";
+			tmp=tmp%60;
+		}
+		else {
+			temp+="00:";
+		}
+		if ( tmp > 60 ) {
+			if ( tmp%60 < 10 ) {
+				temp+="0"+tmp/60+":";
+			}
+			else {
+				temp+=tmp/60+":";
+			}
+			tmp=tmp%60;
+		}
+		else {
+			temp+="00:";
+		}
+		if ( tmp < 10 ) {
+			temp+="0"+tmp;
+		}
+		else {
+			temp+=tmp;
+		}
+
+		System.out.println(" converted: "+temp);
+		return temp;
+	}
+
     @FXML
     void toHomescreen(ActionEvent event) throws IOException {
     	URL url = new File("src/application/view/Main.fxml").toURI().toURL();
@@ -87,6 +123,6 @@ public class BasketballGraphController implements Initializable {
         window.show();
     }
 
-    
-    
+
+
 }

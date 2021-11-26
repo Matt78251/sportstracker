@@ -67,8 +67,13 @@
                   <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-            <PieChart fx:id="teamBpiechart" layoutX="50.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" />
-            <PieChart fx:id="teamApiechart" layoutX="550.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" />
+            <PieChart fx:id="teamBpiechart" layoutX="10.0" layoutY="270.0" legendSide="LEFT" prefHeight="215.0" prefWidth="275.0" />
+            <PieChart fx:id="teamApiechart" layoutX="513.0" layoutY="270.0" legendSide="RIGHT" prefHeight="215.0" prefWidth="275.0" />
+            <Label fx:id="tieLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="450.0" prefHeight="36.0" prefWidth="300.0" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

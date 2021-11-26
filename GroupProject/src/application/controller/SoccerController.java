@@ -53,6 +53,9 @@ public class SoccerController {
     
     @FXML
     private Button periodBut;
+    
+    @FXML
+    private Label tieLabel;
 
     @FXML
     private AnchorPane soccerPane;
@@ -142,6 +145,30 @@ public class SoccerController {
         			new PieChart.Data(teamAName.getText().trim(), teamAScore),
         			new PieChart.Data(teamBName.getText().trim(), teamBScore));
         	teamBpiechart.setData(pieChartData);
+    	}
+    	
+    	//there is a tie
+    	if(teamAScore == teamBScore)
+    	{
+    		tieLabel.setText("There Is A Tie");
+    		
+    		
+    		//team B piechart
+    		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+        			new PieChart.Data("Period One", teamAp1.get(0)),
+        			new PieChart.Data("Period Two", teamAp2.get(0)),
+        			new PieChart.Data("Period Three", teamAp3.get(0)),
+        			new PieChart.Data("Period Four", teamAp4.get(0)));
+        	teamBpiechart.setData(pieChartData);
+        	
+        	//team A piechart
+        	ObservableList<PieChart.Data> pieChartData2 = FXCollections.observableArrayList(
+        			new PieChart.Data("Period One", teamBp1.get(0)),
+        			new PieChart.Data("Period Two", teamBp2.get(0)),
+        			new PieChart.Data("Period Three", teamBp3.get(0)),
+        			new PieChart.Data("Period Four", teamBp4.get(0)));
+        	teamApiechart.setData(pieChartData2);
+    		
     	}
     	
     	
