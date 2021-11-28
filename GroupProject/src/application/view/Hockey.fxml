@@ -1,15 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HockeyController">
    <children>
-      <AnchorPane fx:id="hockeyPane" prefHeight="720.0" prefWidth="1280.0">
+      <AnchorPane fx:id="hockeyPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #98d3a8;">
          <children>
-            <Button layoutX="1182.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
-         </children></AnchorPane>
+            <ImageView fitHeight="500.0" fitWidth="800.0" opacity="0.75" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="hockeyrink.jpg" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="720.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButton" prefHeight="20.0" prefWidth="70.0" text="Back" textAlignment="CENTER" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="110.0" layoutY="230.0" mnemonicParsing="false" onAction="#addAGoal" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #90EE90;" text="GOAL" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="610.0" layoutY="230.0" mnemonicParsing="false" onAction="#addBGoal" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #90EE90;" text="GOAL" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <TextField fx:id="teamAName" alignment="CENTER" layoutX="50.0" layoutY="60.0" prefHeight="40.0" prefWidth="200.0" promptText="Enter Team A">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></TextField>
+            <TextField fx:id="teamBName" alignment="CENTER" layoutX="550.0" layoutY="60.0" prefHeight="40.0" prefWidth="200.0" promptText="Enter Team B">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></TextField>
+            <Label fx:id="timerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="50.0" prefHeight="40.0" prefWidth="200.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#startTime" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #90EE90;" text="Start" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="200.0" mnemonicParsing="false" onAction="#resumeButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #F2DB64;" text="Resume" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="150.0" mnemonicParsing="false" onAction="#stopTime" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FF7F7F;" text="Stop" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <TextField fx:id="enteredMinutes" alignment="CENTER" layoutX="300.0" layoutY="250.0" prefHeight="40.0" prefWidth="100.0" promptText="Enter Minutes" />
+            <TextField fx:id="enteredSeconds" alignment="CENTER" layoutX="400.0" layoutY="250.0" prefHeight="40.0" prefWidth="100.0" promptText="Enter Seconds" />
+            <TextField fx:id="teamAPoints" alignment="CENTER" layoutX="100.0" layoutY="120.0" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="40.0" />
+               </font></TextField>
+            <TextField fx:id="teamBPoints" alignment="CENTER" layoutX="600.0" layoutY="120.0" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="40.0" />
+               </font></TextField>
+            <TextField fx:id="period" alignment="CENTER" layoutX="375.0" layoutY="348.0" prefHeight="50.0" prefWidth="50.0" text="0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="310.0" prefHeight="30.0" prefWidth="100.0" text="PERIOD" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="periodBut" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="410.0" mnemonicParsing="false" onAction="#nextPeriodButton" opacity="0.0" prefHeight="40.0" prefWidth="100.0" text="Next Period" textAlignment="CENTER" />
+            <Label fx:id="teamAWin" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="330.0" opacity="0.0" prefHeight="60.0" prefWidth="325.0" text="WINNER" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" width="5.0" />
+               </effect>
+            </Label>
+            <Label fx:id="teamBWin" alignment="CENTER" contentDisplay="CENTER" layoutX="465.0" layoutY="330.0" opacity="0.0" prefHeight="60.0" prefWidth="325.0" text="WINNER" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" width="5.0" />
+               </effect>
+            </Label>
+            <PieChart fx:id="teamBpiechart" layoutX="10.0" layoutY="270.0" legendSide="LEFT" prefHeight="215.0" prefWidth="325.0" />
+            <PieChart fx:id="teamApiechart" layoutX="463.0" layoutY="270.0" legendSide="RIGHT" prefHeight="215.0" prefWidth="325.0" />
+            <Label fx:id="tieLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="450.0" prefHeight="36.0" prefWidth="300.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
