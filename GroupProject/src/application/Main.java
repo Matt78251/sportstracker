@@ -3,7 +3,6 @@ package application;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
-
 import application.model.GraphEvent;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

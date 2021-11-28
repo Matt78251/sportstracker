@@ -24,7 +24,10 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="50.0" layoutY="95.0" text="HOLE #" />
+            <Label layoutX="50.0" layoutY="95.0" text="HOLE #">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
             <TextField fx:id="player1Name" layoutX="4.0" layoutY="140.0" prefHeight="40.0" prefWidth="120.0" promptText="Enter Player1 Name" />
             <TextField fx:id="p1h1" alignment="CENTER" layoutX="130.0" layoutY="140.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p1h2" alignment="CENTER" layoutX="170.0" layoutY="140.0" prefHeight="40.0" prefWidth="40.0" />
@@ -36,8 +39,11 @@
             <TextField fx:id="p1h8" alignment="CENTER" layoutX="410.0" layoutY="140.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p1h9" alignment="CENTER" layoutX="450.0" layoutY="140.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p1Total" alignment="CENTER" layoutX="520.0" layoutY="140.0" prefHeight="40.0" prefWidth="50.0" />
-            <Label layoutX="520.0" layoutY="90.0" text="Total" textAlignment="CENTER" />
-            <Button layoutX="50.0" layoutY="425.0" mnemonicParsing="false" onAction="#totalsButton" prefHeight="40.0" prefWidth="150.0" text="Caclulate Totals" />
+            <Label layoutX="520.0" layoutY="95.0" text="Total" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Button layoutX="50.0" layoutY="425.0" mnemonicParsing="false" onAction="#totalsButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #90EE90;" text="Caclulate Totals" />
             <TextField fx:id="player2Name" layoutX="4.0" layoutY="200.0" prefHeight="40.0" prefWidth="120.0" promptText="Enter Player2 Name" />
             <TextField fx:id="p2h1" alignment="CENTER" layoutX="130.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p2h2" alignment="CENTER" layoutX="170.0" layoutY="200.0" prefHeight="40.0" prefWidth="40.0" />
@@ -76,16 +82,43 @@
             <TextField fx:id="p4h8" alignment="CENTER" layoutX="410.0" layoutY="320.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p4h9" alignment="CENTER" layoutX="450.0" layoutY="320.0" prefHeight="40.0" prefWidth="40.0" />
             <TextField fx:id="p4Total" alignment="CENTER" layoutX="520.0" layoutY="320.0" prefHeight="40.0" prefWidth="50.0" />
-            <Label layoutX="145.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="1" textAlignment="CENTER" />
-            <Label layoutX="185.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="2" textAlignment="CENTER" />
-            <Label layoutX="225.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="3" textAlignment="CENTER" />
-            <Label layoutX="265.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="4" textAlignment="CENTER" />
-            <Label layoutX="305.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="5" textAlignment="CENTER" />
-            <Label layoutX="345.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="6" textAlignment="CENTER" />
-            <Label layoutX="385.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="7" textAlignment="CENTER" />
-            <Label layoutX="425.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="8" textAlignment="CENTER" />
-            <Label layoutX="465.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="9" textAlignment="CENTER" />
-            <Button layoutX="50.0" layoutY="478.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="40.0" prefWidth="150.0" text="Reset Scores" />
+            <Label layoutX="145.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="1" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="185.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="2" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="225.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="3" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="265.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="4" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="305.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="5" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="345.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="6" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="385.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="7" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="425.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="8" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="465.0" layoutY="90.0" prefHeight="40.0" prefWidth="40.0" text="9" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Button layoutX="50.0" layoutY="478.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #F2DB64;" text="Reset Scores" />
             <PieChart fx:id="pieChart" layoutX="250.0" layoutY="378.0" legendSide="RIGHT" prefHeight="211.0" prefWidth="343.0" />
          </children></AnchorPane>
    </children>
