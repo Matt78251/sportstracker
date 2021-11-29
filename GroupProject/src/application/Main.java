@@ -1,3 +1,4 @@
+//worked on by John Jones and Matthew Wilson
 package application;
 	
 import java.io.File;
